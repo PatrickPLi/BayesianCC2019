@@ -45,7 +45,14 @@ int main(void)
 		data = parseInput(input);
 		for (int i = 0; i < data.size(); i++)
 		{
-			dataOutput << data[i] << ",";
+			if (i == data.size() - 1)
+			{
+				dataOutput << data[i];
+			}
+			else
+			{
+				dataOutput << data[i] << ",";
+			}
 		}
 		dataOutput << '\n';
 		input = getInput();
